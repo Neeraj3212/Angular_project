@@ -1,0 +1,8 @@
+<h1>Product List</h1>
+<button [routerLink]="['/products/new']">Add Product</button>
+<button [routerLink]="['/favourites']">View Favourites</button>
+<div class="products">
+    <app-product-card *ngFor="let product of products" [product]="product"
+        [markFavourite]="getMarkFavourite(product.id)"
+        [removeFavourite]="getRemoveFavourite(product.id)"></app-product-card>
+</div>

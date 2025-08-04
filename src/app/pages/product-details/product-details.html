@@ -1,0 +1,9 @@
+<div *ngIf="product" class="product-container">
+    <img [src]="product.imageUrl" alt="Product Image">
+    <h2>{{ product.name }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: ₹{{ product.price }}</p>
+    <p>Category: {{ product.category }}</p>
+    <p>Discount: {{ product.discount }}%</p>
+    <button (click)="deleteProduct()">Delete</button>
+</div>

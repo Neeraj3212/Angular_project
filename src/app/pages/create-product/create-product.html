@@ -1,0 +1,43 @@
+<div class="form-container">
+    <h2>Add New Product</h2>
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="name">Product Name</label>
+            <input id="name" type="text" formControlName="name">
+        </div>
+        <div class="validation" *ngIf="productForm.controls.name.invalid && productForm.controls.name.touched">Name is required</div>
+
+        <div>
+            <label for="description">Description</label>
+            <input id="description" type="text" formControlName="description">
+        </div>
+        <div class="validation" *ngIf="productForm.controls.description.invalid && productForm.controls.description.touched">Description is required</div>
+        <div>
+            <label for="price">Price</label>
+            <input id="price" type="number" formControlName="price">
+        </div>
+        <div class="validation" *ngIf="productForm.controls.price.invalid && productForm.controls.price.touched">Price is required</div>
+        <div>
+            <label for="discount">Discount</label>
+            <input id="discount" type="number" formControlName="discount">
+        </div>
+        <div>
+            <label for="category">Category</label>
+            <input id="category" type="text" formControlName="category">
+        </div>
+        <div class="validation" *ngIf="productForm.controls.category.invalid && productForm.controls.category.touched">Category is required</div>
+        <div>
+            <label for="image">Product Image</label>
+            <input id="image" type="file" (change)="onImageSelected($event)" accept="Image/*">
+            <div class="image-preview" *ngIf="imagePreview">
+                <img [src]="imagePreview" alt="Preview"/>
+            </div>
+        </div>
+        
+        
+        <div class="button-group">
+            <button type="submit" class="save" [disabled]="productForm.invalid">Add Product</button>
+            <button type="button" class="reset" (click)="resetForm()">Reset</button>
+        </div>
+    </form>
+</div>

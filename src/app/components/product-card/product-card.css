@@ -1,0 +1,46 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.card img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.card button {
+  margin-top: 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,8 @@
+<div class="card" (click)="navigateToDetails()">
+    <img *ngIf="product.imageUrl" [src]="product.imageUrl" alt="Product Image" width="150" height="150">
+    <h3>{{ product.name }}</h3>
+    <p>Category: {{ product.category }}</p>
+    <p>Price: ₹{{ product.price }}</p>
+    <button *ngIf="!product.isFavourite" (click)="onFavouriteClick(); $event.stopPropagation()">Mark as Favourite</button>
+    <button *ngIf="product.isFavourite" (click)="onRemoveFavourite(); $event.stopPropagation()">Remove From Favourite</button>
+</div>
